@@ -1,0 +1,7 @@
+{
+    "icon": "trinkets:gui/slots/glove_mirrored",
+    "order": 4,
+    "amount": 1,
+    "validator_predicates": ["trinkets:tag"],
+    "drop_rule": "keep"
+}

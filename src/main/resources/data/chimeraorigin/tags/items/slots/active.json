@@ -1,0 +1,11 @@
+{
+    "replace": false,
+    "values": [
+        "chimeraorigin:mage_killer",
+        "chimeraorigin:slime_tentacles",
+        "chimeraorigin:squid_tentacles",
+        "chimeraorigin:warden_vocal_cords",
+        "chimeraorigin:ravager_horns",
+        "chimeraorigin:llama_glands"
+    ]
+}

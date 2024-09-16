@@ -1,0 +1,7 @@
+{
+    "icon": "trinkets:gui/slots/ring",
+    "order": 0,
+    "amount": 1,
+    "validator_predicates": ["trinkets:tag"],
+    "drop_rule": "keep"
+}

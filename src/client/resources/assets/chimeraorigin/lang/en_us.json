@@ -1,0 +1,30 @@
+{
+  "item.chimeraorigin.blaze_core": "Blaze Core",
+  "item.chimeraorigin.chimera_prime_core": "Chimera Prime Core",
+  "item.chimeraorigin.dragon_heart": "Dragon Heart",
+  "item.chimeraorigin.omnivore_stomach": "Omnivore Stomach",
+  "item.chimeraorigin.prismarine_core": "Prismarine Core",
+  "item.chimeraorigin.silverfish_stomach": "Silverfish Stomach",
+
+  "item.chimeraorigin.llama_glands": "Llama Glands",
+  "item.chimeraorigin.mage_killer": "Mage-Killer",
+  "item.chimeraorigin.ravager_horns": "Ravager Horns",
+  "item.chimeraorigin.slime_tentacles": "Slime Tentacles",
+  "item.chimeraorigin.squid_tentacles": "Squid Tentacles",
+  "item.chimeraorigin.warden_vocal_cords": "Warden Vocal Cords",
+
+  "item.chimeraorigin.allay_larynx": "Allay Larynx",
+  "item.chimeraorigin.cave_spider_fangs": "Cave Spider Fangs",
+  "item.chimeraorigin.creeper_skin": "Creeper Skin",
+  "item.chimeraorigin.dragon_scales": "Dragon Scales",
+  "item.chimeraorigin.horse_muscles": "Horse Muscles",
+  "item.chimeraorigin.ocelot_paws": "Ocelot Paws",
+  "item.chimeraorigin.phantom_eyes": "Phantom Eyes",
+  "item.chimeraorigin.warden_claws": "Warden Claws",
+
+  "trinkets.slot.chimeraorigin.core": "Chimera's core modification",
+  "trinkets.slot.chimeraorigin.active_primary": "Chimera's active modification I",
+  "trinkets.slot.chimeraorigin.active_secondary": "Chimera's active modification II",
+  "trinkets.slot.chimeraorigin.passive_primary": "Chimera's passive modification I",
+  "trinkets.slot.chimeraorigin.passive_secondary": "Chimera's passive modification II"
+}

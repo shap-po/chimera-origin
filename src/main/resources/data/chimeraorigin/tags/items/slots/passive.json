@@ -1,0 +1,13 @@
+{
+    "replace": false,
+    "values": [
+        "chimeraorigin:creeper_skin",
+        "chimeraorigin:dragon_scales",
+        "chimeraorigin:cave_spider_fangs",
+        "chimeraorigin:ocelot_paws",
+        "chimeraorigin:allay_larynx",
+        "chimeraorigin:phantom_eyes",
+        "chimeraorigin:warden_claws",
+        "chimeraorigin:horse_muscles"
+    ]
+}

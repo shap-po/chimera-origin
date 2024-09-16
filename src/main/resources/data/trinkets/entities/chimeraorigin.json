@@ -1,0 +1,12 @@
+{
+  "entities": [
+    "player"
+  ],
+  "slots": [
+    "chimeraorigin/core",
+    "chimeraorigin/active_primary",
+    "chimeraorigin/active_secondary",
+    "chimeraorigin/passive_primary",
+    "chimeraorigin/passive_secondary"
+  ]
+}

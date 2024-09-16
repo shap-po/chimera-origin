@@ -1,0 +1,11 @@
+{
+    "replace": false,
+    "values": [
+        "chimeraorigin:chimera_prime_core",
+        "chimeraorigin:dragon_heart",
+        "chimeraorigin:blaze_core",
+        "chimeraorigin:prismarine_core",
+        "chimeraorigin:omnivore_stomach",
+        "chimeraorigin:silverfish_stomach"
+    ]
+}

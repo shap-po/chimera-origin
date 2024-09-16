@@ -1,0 +1,7 @@
+{
+    "icon": "trinkets:gui/slots/aglet",
+    "order": 1,
+    "amount": 1,
+    "validator_predicates": ["trinkets:tag"],
+    "drop_rule": "keep"
+}
