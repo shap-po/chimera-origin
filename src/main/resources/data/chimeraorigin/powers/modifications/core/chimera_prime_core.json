@@ -1,0 +1,16 @@
+{
+  "type": "origins:recipe",
+
+  "recipe": {
+    "type": "minecraft:crafting_shapeless",
+    "id": "chimeraorigin:chimera_prime_core",
+    "ingredients": [
+      {
+        "item": "minecraft:nether_star"
+      }
+    ],
+    "result": {
+      "item": "chimeraorigin:chimera_prime_core"
+    }
+  }
+}

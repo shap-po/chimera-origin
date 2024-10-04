@@ -1,0 +1,52 @@
+{
+  "type": "origins:multiple",
+
+  "modify_villager_reputation": {
+    "type": "shappoli:modify_villager_reputation",
+
+    "modifier": {
+      "operation": "addition",
+      "value": 100
+    },
+
+    "condition": {
+      "type": "shappoli:equipped_trinket",
+      "slot": {
+        "group": "chimeraorigin"
+      },
+      "item_condition": {
+        "type": "origins:and",
+        "conditions": [
+          {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "chimeraorigin:allay_larynx"
+            }
+          },
+          {
+            "type": "origins:item_cooldown",
+            "comparison": "!=",
+            "compare_to": 0,
+            "inverted": true
+          }
+        ]
+      }
+    }
+  },
+
+  "obtain": {
+    "type": "origins:replace_loot_table",
+    "replace": {
+      "minecraft:entities/allay": "chimeraorigin:allay_larynx"
+    }
+  },
+  "badges": [
+    {
+      "type": "origins:tooltip",
+      "sprite": "origins:textures/gui/community/silent/badge/icons/sword.png",
+      "text": {
+        "translate": "badge.chimeraorigin.modifications.allay_larynx"
+      }
+    }
+  ]
+}

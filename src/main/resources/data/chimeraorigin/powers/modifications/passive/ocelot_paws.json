@@ -1,0 +1,56 @@
+{
+  "type": "origins:multiple",
+
+  "modify_fall": {
+    "type": "origins:modify_damage_taken",
+
+    "damage_condition": {
+      "type": "origins:name",
+      "name": "fall"
+    },
+    "modifier": {
+      "operation": "multiply_base_additive",
+      "value": -0.5
+    },
+
+    "condition": {
+      "type": "shappoli:equipped_trinket",
+      "slot": {
+        "group": "chimeraorigin"
+      },
+      "item_condition": {
+        "type": "origins:and",
+        "conditions": [
+          {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "chimeraorigin:ocelot_paws"
+            }
+          },
+          {
+            "type": "origins:item_cooldown",
+            "comparison": "!=",
+            "compare_to": 0,
+            "inverted": true
+          }
+        ]
+      }
+    }
+  },
+
+  "obtain": {
+    "type": "origins:replace_loot_table",
+    "replace": {
+      "minecraft:entities/ocelot": "chimeraorigin:ocelot_paws"
+    }
+  },
+  "badges": [
+    {
+      "type": "origins:tooltip",
+      "sprite": "origins:textures/gui/community/silent/badge/icons/sword.png",
+      "text": {
+        "translate": "badge.chimeraorigin.modifications.ocelot_paws"
+      }
+    }
+  ]
+}

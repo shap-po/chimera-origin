@@ -1,0 +1,92 @@
+{
+  "type": "origins:multiple",
+  "less_damage": {
+    "type": "origins:modify_damage_taken",
+
+    "modifier": {
+      "operation": "multiply_base_additive",
+      "value": -0.2
+    },
+
+    "condition": {
+      "type": "shappoli:equipped_trinket",
+      "slot": {
+        "group": "chimeraorigin"
+      },
+      "item_condition": {
+        "type": "origins:and",
+        "conditions": [
+          {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "chimeraorigin:dragon_scales"
+            }
+          },
+          {
+            "type": "origins:item_cooldown",
+            "comparison": "!=",
+            "compare_to": 0,
+            "inverted": true
+          }
+        ]
+      }
+    }
+  },
+
+  "obtain": {
+    "type": "origins:action_on_block_use",
+    "block_condition": {
+      "type": "origins:in_tag",
+      "tag": "chimeraorigin:dragon_head"
+    },
+    "item_condition": {
+      "type": "origins:ingredient",
+      "ingredient": {
+        "tag": "minecraft:axes"
+      }
+    },
+
+    "block_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:set_block",
+          "block": "minecraft:air"
+        },
+        {
+          "type": "origins:execute_command",
+          "command": "particle minecraft:dragon_breath ~ ~ ~ 0.1 0.1 0.1 0.05 10"
+        },
+        {
+          "type": "origins:chance",
+          "chance": 0.2,
+          "action": {
+            "type": "origins:spawn_entity",
+            "entity_type": "minecraft:item",
+            "tag": "{Item:{id:\"chimeraorigin:dragon_scales\",Count:1b}}"
+          }
+        }
+      ]
+    },
+    "held_item_action": {
+      "type": "origins:damage"
+    },
+
+    "entity_action": {
+      "type": "origins:play_sound",
+      "sound": "minecraft:item.axe.strip",
+      "category": "players"
+    },
+
+    "action_result": "success"
+  },
+  "badges": [
+    {
+      "type": "origins:tooltip",
+      "sprite": "origins:textures/gui/community/silent/badge/icons/pickaxe.png",
+      "text": {
+        "translate": "badge.chimeraorigin.modifications.dragon_scales"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "badges": [
+    {
+      "type": "origins:sprite",
+      "sprite": "origins:textures/gui/community/silent/badge/shapes/shape_triangle.png"
+    },
+    {
+      "type": "origins:sprite",
+      "sprite": "origins:textures/gui/community/silent/badge/shapes/shape_triangle.png"
+    }
+  ],
+  "type": "origins:simple"
+}

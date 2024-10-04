@@ -1,0 +1,8 @@
+{
+  "entity_types": [
+    "minecraft:player"
+  ],
+  "powers": [
+    "chimeraorigin:restrict_slots"
+  ]
+}

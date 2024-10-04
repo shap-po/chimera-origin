@@ -1,0 +1,42 @@
+{
+  "type": "origins:prevent_item_use",
+
+  "condition": {
+    "type": "shappoli:equipped_trinket",
+    "item_condition": {
+      "type": "origins:ingredient",
+      "ingredient": {
+        "item": "chimeraorigin:omnivore_stomach"
+      }
+    },
+    "inverted": true
+  },
+  "item_condition": {
+    "type": "origins:and",
+    "conditions": [
+      {
+        "type": "origins:food"
+      },
+      {
+        "type": "origins:or",
+        "inverted": true,
+        "conditions": [
+          {
+            "type": "origins:ingredient",
+            "ingredient": [
+              {
+                "tag": "origins:meat"
+              },
+              {
+                "tag": "chimeraorigin:ignore_diet"
+              }
+            ]
+          },
+          {
+            "type": "origins:meat"
+          }
+        ]
+      }
+    ]
+  }
+}

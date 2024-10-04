@@ -1,0 +1,198 @@
+{
+  "type": "origins:multiple",
+
+  "disguise": {
+    "type": "origins:resource",
+    "min": 0,
+    "max": 120,
+    "hud_render": {
+      "should_render": true,
+      "sprite_location": "origins:textures/gui/community/spiderkolo/resource_bar_02.png",
+      "bar_index": 22,
+      "condition": {
+        "type": "origins:resource",
+        "resource": "*:*_disguise",
+        "comparison": ">",
+        "compare_to": 0
+      }
+    }
+  },
+
+  "disguise_update": {
+    "type": "origins:action_over_time",
+    "interval": 5,
+    "entity_action": {
+      "type": "origins:if_else_list",
+      "actions": [
+        {
+          "condition": {
+            "type": "origins:moving",
+            "horizontally": true,
+            "vertically": true,
+            "inverted": true
+          },
+          "action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_disguise",
+            "operation": "add",
+            "change": 5
+          }
+        },
+        {
+          "condition": {
+            "type": "origins:sneaking"
+          },
+          "action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_disguise",
+            "operation": "add",
+            "change": 2
+          }
+        },
+        {
+          "condition": {
+            "type": "origins:sprinting"
+          },
+          "action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_disguise",
+            "operation": "add",
+            "change": -40
+          }
+        },
+        {
+          "condition": {
+            "type": "origins:constant",
+            "value": true
+          },
+          "action": {
+            "type": "origins:change_resource",
+            "resource": "*:*_disguise",
+            "operation": "add",
+            "change": -20
+          }
+        }
+      ]
+    },
+    "falling_action": {
+      "type": "origins:change_resource",
+      "resource": "*:*_disguise",
+      "operation": "set",
+      "change": 0
+    },
+
+    "condition": {
+      "type": "shappoli:equipped_trinket",
+      "slot": {
+        "group": "chimeraorigin"
+      },
+      "item_condition": {
+        "type": "origins:and",
+        "conditions": [
+          {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "chimeraorigin:creeper_skin"
+            }
+          },
+          {
+            "type": "origins:item_cooldown",
+            "comparison": "!=",
+            "compare_to": 0,
+            "inverted": true
+          }
+        ]
+      }
+    }
+  },
+
+  "transparency_1": {
+    "type": "origins:model_color",
+    "alpha": 0.8,
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "*:*_disguise",
+          "comparison": ">",
+          "compare_to": 20
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_disguise",
+          "comparison": "<=",
+          "compare_to": 40
+        }
+      ]
+    }
+  },
+  "transparency_2": {
+    "type": "origins:model_color",
+    "alpha": 0.6,
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "*:*_disguise",
+          "comparison": ">",
+          "compare_to": 40
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_disguise",
+          "comparison": "<=",
+          "compare_to": 80
+        }
+      ]
+    }
+  },
+  "transparency_3": {
+    "type": "origins:model_color",
+    "alpha": 0.4,
+    "condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:resource",
+          "resource": "*:*_disguise",
+          "comparison": ">",
+          "compare_to": 80
+        },
+        {
+          "type": "origins:resource",
+          "resource": "*:*_disguise",
+          "comparison": "<",
+          "compare_to": 120
+        }
+      ]
+    }
+  },
+  "full_invisibility": {
+    "type": "origins:invisibility",
+    "render_armor": true,
+    "condition": {
+      "type": "origins:resource",
+      "resource": "*:*_disguise",
+      "comparison": "==",
+      "compare_to": 120
+    }
+  },
+
+  "obtain": {
+    "type": "origins:recipe",
+    "recipe": {
+      "id": "chimeraorigin:creeper_skin",
+      "type": "minecraft:crafting_shapeless",
+      "ingredients": [
+        {
+          "item": "minecraft:creeper_head"
+        }
+      ],
+      "result": {
+        "item": "chimeraorigin:creeper_skin"
+      }
+    }
+  }
+}

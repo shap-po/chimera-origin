@@ -26,5 +26,105 @@
   "trinkets.slot.chimeraorigin.active_primary": "Chimera's active modification I",
   "trinkets.slot.chimeraorigin.active_secondary": "Chimera's active modification II",
   "trinkets.slot.chimeraorigin.passive_primary": "Chimera's passive modification I",
-  "trinkets.slot.chimeraorigin.passive_secondary": "Chimera's passive modification II"
+  "trinkets.slot.chimeraorigin.passive_secondary": "Chimera's passive modification II",
+
+  "origin.chimeraorigin.chimera.name": "Chimera",
+  "origin.chimeraorigin.chimera.description": "Born pretty weak, Chimeras survive and adapt by changing their body parts and mimicking other creatures.",
+
+  "power.chimeraorigin.carnivore.name": "Carnivore",
+  "power.chimeraorigin.carnivore.description": "You can only eat meat.",
+
+  "power.chimeraorigin.weak.name": "Weakling",
+  "power.chimeraorigin.weak.description": "You are not particularly good at anything. As a matter of fact, you have less health than others.",
+
+  "power.chimeraorigin.modifications.modifications.name": "Body modifications",
+  "power.chimeraorigin.modifications.modifications.description": "You can modify parts of your body to gain new abilities. Careful, as removing a modification will wear it out.",
+
+  "power.chimeraorigin.modifications.active.active.name": "\nActive modifications",
+  "power.chimeraorigin.modifications.active.active.description": "Two of your modifications are active.",
+
+  "power.chimeraorigin.modifications.active.llama_glands.name": "Llama glands",
+  "power.chimeraorigin.modifications.active.llama_glands.description": "Spit at your enemies!",
+
+  "power.chimeraorigin.modifications.active.mage_killer.name": "Mage killer",
+  "power.chimeraorigin.modifications.active.mage_killer.description": "Block all magic-based powers in a radius around you.",
+
+  "power.chimeraorigin.modifications.active.ravager_horns.name": "Ravager horns",
+  "power.chimeraorigin.modifications.active.ravager_horns.description": "You can charge at your enemies.",
+
+  "power.chimeraorigin.modifications.active.slime_tentacles.name": "Slime tentacles",
+  "power.chimeraorigin.modifications.active.slime_tentacles.description": "You can pull/push entities towards/away from you.",
+
+  "power.chimeraorigin.modifications.active.squid_tentacles.name": "Squid tentacles",
+  "power.chimeraorigin.modifications.active.squid_tentacles.description": "You can blind and slow down entities in a radius around you.",
+
+  "power.chimeraorigin.modifications.active.warden_vocal_cords.name": "Warden vocal cords",
+  "power.chimeraorigin.modifications.active.warden_vocal_cords.description": "Sonic boom!",
+
+  "power.chimeraorigin.modifications.core.core.name": "\nCore modifications",
+  "power.chimeraorigin.modifications.core.core.description": "One of your modifications is a core modification.",
+
+  "power.chimeraorigin.modifications.core.blaze_core.name": "Blaze core",
+  "power.chimeraorigin.modifications.core.blaze_core.description": "You are now always on fire! Except it doesn't hurt you. You see better in lava swim faster in it",
+
+  "power.chimeraorigin.modifications.core.chimera_prime_core.name": "Chimera Prime core",
+  "power.chimeraorigin.modifications.core.chimera_prime_core.description": "Perfect adaptation! Removes all penalties from switching body parts",
+
+  "power.chimeraorigin.modifications.core.dragon_heart.name": "Dragon heart",
+  "power.chimeraorigin.modifications.core.dragon_heart.description": "A few more hearts and better regeneration. Nothing more, nothing less.",
+
+  "power.chimeraorigin.modifications.core.omnivore_stomach.name": "Omnivore stomach",
+  "power.chimeraorigin.modifications.core.omnivore_stomach.description": "You can finally enjoy any kind of food! And by any kind I mean §oany§r kind.",
+
+  "power.chimeraorigin.modifications.core.prismarine_core.name": "Prismarine core",
+  "power.chimeraorigin.modifications.core.prismarine_core.description": "You can breathe underwater, see better in it, and swim faster.",
+
+  "power.chimeraorigin.modifications.core.silverfish_stomach.name": "Silverfish stomach",
+  "power.chimeraorigin.modifications.core.silverfish_stomach.description": "You can eat any block you can imagine. Be careful, as pests like you are not welcome in most places.",
+
+  "power.chimeraorigin.modifications.passive.passive.name": "\nPassive modifications",
+  "power.chimeraorigin.modifications.passive.passive.description": "Two of your modifications are passive.",
+
+  "power.chimeraorigin.modifications.passive.allay_larynx.name": "Allay larynx",
+  "power.chimeraorigin.modifications.passive.allay_larynx.description": "Villagers love your voice! You can trade with them for better prices.",
+
+  "power.chimeraorigin.modifications.passive.cave_spider_fangs.name": "Cave Spider fangs",
+  "power.chimeraorigin.modifications.passive.cave_spider_fangs.description": "You sometimes poison your enemies when you hit them.",
+
+  "power.chimeraorigin.modifications.passive.creeper_skin.name": "Creeper skin",
+  "power.chimeraorigin.modifications.passive.creeper_skin.description": "You can blend in with the environment if you stay relatively still.",
+
+  "power.chimeraorigin.modifications.passive.dragon_scales.name": "Dragon scales",
+  "power.chimeraorigin.modifications.passive.dragon_scales.description": "You take less damage.",
+
+  "power.chimeraorigin.modifications.passive.horse_muscles.name": "Horse muscles",
+  "power.chimeraorigin.modifications.passive.horse_muscles.description": "You now have at least two horsepowers in you. Run as fast as a horse you've murdered!",
+
+  "power.chimeraorigin.modifications.passive.ocelot_paws.name": "Ocelot paws",
+  "power.chimeraorigin.modifications.passive.ocelot_paws.description": "Take less fall damage",
+
+  "power.chimeraorigin.modifications.passive.phantom_eyes.name": "Phantom eyes",
+  "power.chimeraorigin.modifications.passive.phantom_eyes.description": "See better in the dark",
+
+  "power.chimeraorigin.modifications.passive.warden_claws.name": "Warden claws",
+  "power.chimeraorigin.modifications.passive.warden_claws.description": "Dig faster",
+
+  "badge.chimeraorigin.modifications.llama_glands": "Sometimes dropped by Llamas.",
+  "badge.chimeraorigin.modifications.ravager_horns": "Sometimes dropped by Ravagers.",
+  "badge.chimeraorigin.modifications.slime_tentacles": "Sometimes dropped by big Slimes.",
+  "badge.chimeraorigin.modifications.squid_tentacles": "Sometimes dropped by Squids.",
+  "badge.chimeraorigin.modifications.warden_vocal_cords": "Sometimes dropped by Wardens.",
+  "badge.chimeraorigin.modifications.blaze_core": "Sometimes dropped by Blazes.",
+  "badge.chimeraorigin.modifications.blaze_core_wildfire": "Also dropped by Wildfires if you have Friends & Foes installed.",
+  "badge.chimeraorigin.modifications.dragon_heart": "Sometimes dropped by Ender Dragons.",
+  "badge.chimeraorigin.modifications.prismarine_core": "Sometimes dropped by Elder Guardians.",
+  "badge.chimeraorigin.modifications.silverfish_stomach": "Sometimes dropped by Silverfish.",
+  "badge.chimeraorigin.modifications.allay_larynx": "Sometimes dropped by Allays.",
+  "badge.chimeraorigin.modifications.cave_spider_fangs": "Sometimes dropped by Cave Spiders.",
+  "badge.chimeraorigin.modifications.dragon_scales": "Can be scrapped from Dragon Heads with an axe.",
+  "badge.chimeraorigin.modifications.horse_muscles": "Sometimes dropped by fast Horses.",
+  "badge.chimeraorigin.modifications.ocelot_paws": "Sometimes dropped by Ocelots.",
+  "badge.chimeraorigin.modifications.phantom_eyes": "Sometimes dropped by Phantoms.",
+
+  "tellraw.chimeraorigin.mage_killer.blocked_power": "Your magical powers are blocked by %s!"
 }

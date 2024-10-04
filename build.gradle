@@ -60,6 +60,7 @@ dependencies {
     // Fabric API. This is technically optional, but you probably want it anyway.
     modImplementation "net.fabricmc.fabric-api:fabric-api:${project.fabric_version}"
     modImplementation "dev.emi:trinkets:${project.trinkets_version}"
+    modImplementation(include("com.github.emilyploszaj:step-height-entity-attribute:${project.step_height_entity_attribute_version}"))
 }
 
 processResources {
@@ -93,7 +94,7 @@ jar {
 // modrinth configuration
 modrinth {
     token = ENV.MODRINTH_TOKEN
-    projectId = project.archives_base_name
+    projectId = "chimeraorigin"
     uploadFile = remapJar
     dependencies {
         // The scope can be `required`, `optional`, `incompatible`, or `embedded`

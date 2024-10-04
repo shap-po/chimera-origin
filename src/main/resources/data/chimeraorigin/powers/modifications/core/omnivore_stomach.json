@@ -1,0 +1,64 @@
+{
+  "type": "origins:multiple",
+
+  "eat_junk": {
+    "type": "origins:edible_item",
+    "food_component": {
+      "hunger": 2,
+      "saturation": 0
+    },
+    "consume_sound": "minecraft:block.nether_wood.place",
+    "item_condition": {
+      "type": "origins:ingredient",
+      "ingredient": {
+        "tag": "chimeraorigin:junk_food"
+      }
+    },
+    "condition": {
+      "type": "origins:resource",
+      "resource": "*:modifications/core/core_equipped",
+      "comparison": "==",
+      "compare_to": 4
+    }
+  },
+
+  "obtain": {
+    "type": "origins:recipe",
+    "recipe": {
+      "type": "minecraft:crafting_shapeless",
+      "id": "chimeraorigin:omnivore_stomach",
+      "ingredients": [
+        {
+          "tag": "minecraft:flowers"
+        },
+        {
+          "item": "minecraft:cactus"
+        },
+        {
+          "item": "minecraft:slime_ball"
+        },
+        {
+          "item": "minecraft:seagrass"
+        },
+        {
+          "item": "minecraft:carrot"
+        },
+        {
+          "item": "minecraft:sweet_berries"
+        },
+        {
+          "item": "minecraft:bamboo"
+        },
+        {
+          "item": "minecraft:wheat"
+        },
+        {
+          "item": "minecraft:warped_fungus"
+        }
+      ],
+      "result": {
+        "item": "chimeraorigin:omnivore_stomach"
+      }
+    }
+  }
+}

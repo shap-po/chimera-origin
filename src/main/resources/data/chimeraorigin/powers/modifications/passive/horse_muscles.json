@@ -1,0 +1,70 @@
+{
+  "type": "origins:multiple",
+
+  "attribute": {
+    "type": "origins:conditioned_attribute",
+
+    "tick_rate": 10,
+    "modifiers": [
+      {
+        "attribute": "minecraft:generic.movement_speed",
+        "operation": "addition",
+        "value": 0.05
+      },
+      {
+        "attribute": "stepheightentityattribute:stepheight",
+        "operation": "addition",
+        "value": 0.5
+      }
+    ],
+
+    "condition": {
+      "type": "shappoli:equipped_trinket",
+      "slot": {
+        "group": "chimeraorigin"
+      },
+      "item_condition": {
+        "type": "origins:and",
+        "conditions": [
+          {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "chimeraorigin:horse_muscles"
+            }
+          },
+          {
+            "type": "origins:item_cooldown",
+            "comparison": "!=",
+            "compare_to": 0,
+            "inverted": true
+          }
+        ]
+      }
+    }
+  },
+
+  "obtain": {
+    "type": "origins:replace_loot_table",
+    "replace": {
+      "minecraft:entities/horse": "chimeraorigin:horse_muscles"
+    },
+    "bientity_condition": {
+      "type": "origins:target_condition",
+      "condition": {
+        "type": "origins:attribute",
+        "attribute": "minecraft:generic.movement_speed",
+        "comparison": ">=",
+        "compare_to": 0.25
+      }
+    }
+  },
+  "badges": [
+    {
+      "type": "origins:tooltip",
+      "sprite": "origins:textures/gui/community/silent/badge/icons/sword.png",
+      "text": {
+        "translate": "badge.chimeraorigin.modifications.horse_muscles"
+      }
+    }
+  ]
+}

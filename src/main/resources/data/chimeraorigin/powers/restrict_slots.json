@@ -1,0 +1,41 @@
+{
+  "type": "shappoli:conditioned_modify_trinket_slots",
+  "hidden": true,
+
+  "interval": 20,
+  "apply_on_added": false,
+
+  "condition": {
+    "type": "origins:origin",
+    "origin": "chimeraorigin:chimera",
+    "inverted": true
+  },
+
+  "modifiers": [
+    {
+      "slot": "chimeraorigin/core",
+      "operation": "addition",
+      "value": -1
+    },
+    {
+      "slot": "chimeraorigin/active_primary",
+      "operation": "addition",
+      "value": -1
+    },
+    {
+      "slot": "chimeraorigin/active_secondary",
+      "operation": "addition",
+      "value": -1
+    },
+    {
+      "slot": "chimeraorigin/passive_primary",
+      "operation": "addition",
+      "value": -1
+    },
+    {
+      "slot": "chimeraorigin/passive_secondary",
+      "operation": "addition",
+      "value": -1
+    }
+  ]
+}

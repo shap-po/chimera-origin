@@ -1,0 +1,53 @@
+{
+  "type": "origins:multiple",
+
+  "more_health": {
+    "type": "origins:conditioned_attribute",
+    "tick_rate": 20,
+    "modifier": {
+      "name": "chimeraorigin:dragon_heart",
+      "attribute": "minecraft:generic.max_health",
+      "operation": "addition",
+      "value": 10
+    },
+    "update_health": true,
+
+    "condition": {
+      "type": "origins:resource",
+      "resource": "*:modifications/core/core_equipped",
+      "comparison": "==",
+      "compare_to": 3
+    }
+  },
+
+  "better_regen": {
+    "type": "origins:modify_healing",
+    "modifier": {
+      "operation": "multiply_base_additive",
+      "value": 0.25
+    },
+
+    "condition": {
+      "type": "origins:resource",
+      "resource": "*:modifications/core/core_equipped",
+      "comparison": "==",
+      "compare_to": 3
+    }
+  },
+
+  "obtain": {
+    "type": "origins:replace_loot_table",
+    "replace": {
+      "minecraft:entities/ender_dragon": "chimeraorigin:dragon_heart"
+    }
+  },
+  "badges": [
+    {
+      "type": "origins:tooltip",
+      "sprite": "origins:textures/gui/community/silent/badge/icons/sword.png",
+      "text": {
+        "translate": "badge.chimeraorigin.modifications.dragon_heart"
+      }
+    }
+  ]
+}

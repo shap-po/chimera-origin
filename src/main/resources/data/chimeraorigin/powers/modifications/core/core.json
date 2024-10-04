@@ -1,0 +1,165 @@
+{
+  "badges": [
+    {
+      "type": "origins:sprite",
+      "sprite": "origins:textures/gui/community/silent/badge/icons/sun_icon.png"
+    }
+  ],
+
+  "type": "origins:multiple",
+
+  "equipped": {
+    "_": "ID of the equipped trinket. Should reduce lag by checking the trinket in a single place.",
+    "type": "origins:resource",
+    "min": 0,
+    "max": 6,
+    "start_value": 0,
+    "hud_render": {
+      "should_render": false
+    }
+  },
+
+  "watcher": {
+    "type": "origins:action_over_time",
+    "interval": 4,
+    "entity_action": {
+      "type": "shappoli:modify_trinket",
+      "slot": {
+        "group": "chimeraorigin",
+        "name": "core"
+      },
+      "limit": 1,
+      "item_action": {
+        "type": "origins:if_else_list",
+        "actions": [
+          {
+            "condition": {
+              "type": "origins:or",
+              "conditions": [
+                {
+                  "type": "origins:empty"
+                },
+                {
+                  "type": "origins:item_cooldown",
+                  "comparison": "!=",
+                  "compare_to": 0
+                }
+              ]
+            },
+            "action": {
+              "type": "origins:holder",
+              "action": {
+                "type": "origins:change_resource",
+                "resource": "*:*_equipped",
+                "operation": "set",
+                "change": 0
+              }
+            }
+          },
+          {
+            "condition": {
+              "type": "origins:ingredient",
+              "ingredient": {
+                "item": "chimeraorigin:blaze_core"
+              }
+            },
+            "action": {
+              "type": "origins:holder",
+              "action": {
+                "type": "origins:change_resource",
+                "resource": "*:*_equipped",
+                "operation": "set",
+                "change": 1
+              }
+            }
+          },
+          {
+            "condition": {
+              "type": "origins:ingredient",
+              "ingredient": {
+                "item": "chimeraorigin:chimera_prime_core"
+              }
+            },
+            "action": {
+              "type": "origins:holder",
+              "action": {
+                "type": "origins:change_resource",
+                "resource": "*:*_equipped",
+                "operation": "set",
+                "change": 2
+              }
+            }
+          },
+          {
+            "condition": {
+              "type": "origins:ingredient",
+              "ingredient": {
+                "item": "chimeraorigin:dragon_heart"
+              }
+            },
+            "action": {
+              "type": "origins:holder",
+              "action": {
+                "type": "origins:change_resource",
+                "resource": "*:*_equipped",
+                "operation": "set",
+                "change": 3
+              }
+            }
+          },
+          {
+            "condition": {
+              "type": "origins:ingredient",
+              "ingredient": {
+                "item": "chimeraorigin:omnivore_stomach"
+              }
+            },
+            "action": {
+              "type": "origins:holder",
+              "action": {
+                "type": "origins:change_resource",
+                "resource": "*:*_equipped",
+                "operation": "set",
+                "change": 4
+              }
+            }
+          },
+          {
+            "condition": {
+              "type": "origins:ingredient",
+              "ingredient": {
+                "item": "chimeraorigin:prismarine_core"
+              }
+            },
+            "action": {
+              "type": "origins:holder",
+              "action": {
+                "type": "origins:change_resource",
+                "resource": "*:*_equipped",
+                "operation": "set",
+                "change": 5
+              }
+            }
+          },
+          {
+            "condition": {
+              "type": "origins:ingredient",
+              "ingredient": {
+                "item": "chimeraorigin:silverfish_stomach"
+              }
+            },
+            "action": {
+              "type": "origins:holder",
+              "action": {
+                "type": "origins:change_resource",
+                "resource": "*:*_equipped",
+                "operation": "set",
+                "change": 6
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

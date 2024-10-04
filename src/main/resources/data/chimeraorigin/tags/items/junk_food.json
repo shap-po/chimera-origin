@@ -1,0 +1,25 @@
+{
+  "values": [
+    "minecraft:spider_eye",
+    "minecraft:tropical_fish_bucket",
+    "#minecraft:flowers",
+    "minecraft:cactus",
+    "minecraft:wheat_seeds",
+    "minecraft:melon_seeds",
+    "minecraft:pumpkin_seeds",
+    "minecraft:beetroot_seeds",
+    "minecraft:torchflower_seeds",
+    "minecraft:pitcher_pod",
+    "minecraft:wheat",
+    "minecraft:slime_ball",
+    "minecraft:crimson_fungus",
+    "minecraft:sugar",
+    "minecraft:hay_block",
+    "minecraft:bamboo",
+    "minecraft:warped_fungus",
+    "minecraft:seagrass",
+
+    "minecraft:nether_wart",
+    "minecraft:cake"
+  ]
+}

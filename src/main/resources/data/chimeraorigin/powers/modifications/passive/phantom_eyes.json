@@ -1,0 +1,49 @@
+{
+  "type": "origins:multiple",
+
+  "night_vision": {
+    "type": "origins:night_vision",
+
+    "strength": 0.2,
+
+    "condition": {
+      "type": "shappoli:equipped_trinket",
+      "slot": {
+        "group": "chimeraorigin"
+      },
+      "item_condition": {
+        "type": "origins:and",
+        "conditions": [
+          {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "chimeraorigin:phantom_eyes"
+            }
+          },
+          {
+            "type": "origins:item_cooldown",
+            "comparison": "!=",
+            "compare_to": 0,
+            "inverted": true
+          }
+        ]
+      }
+    }
+  },
+
+  "obtain": {
+    "type": "origins:replace_loot_table",
+    "replace": {
+      "minecraft:entities/phantom": "chimeraorigin:phantom_eyes"
+    }
+  },
+  "badges": [
+    {
+      "type": "origins:tooltip",
+      "sprite": "origins:textures/gui/community/silent/badge/icons/sword.png",
+      "text": {
+        "translate": "badge.chimeraorigin.modifications.phantom_eyes"
+      }
+    }
+  ]
+}

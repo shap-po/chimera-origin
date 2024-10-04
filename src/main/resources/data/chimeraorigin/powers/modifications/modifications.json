@@ -1,0 +1,161 @@
+{
+  "type": "origins:multiple",
+
+  "switch_penalty": {
+    "type": "shappoli:action_on_trinket_change",
+
+    "slot": {
+      "group": "chimeraorigin"
+    },
+    "item_condition": {
+      "type": "origins:empty",
+      "inverted": true
+    },
+
+    "item_action_on_equip": {
+      "type": "origins:if_else",
+      "condition": {
+        "type": "shappoli:send_condition",
+        "receiver": "*:*_does_penalty_apply"
+      },
+      "if_action": {
+        "type": "origins:and",
+        "actions": [
+          {
+            "type": "origins:modify_item_cooldown",
+            "modifier": {
+              "operation": "add_total_late",
+              "value": 200
+            }
+          },
+          {
+            "type": "origins:holder",
+            "action": {
+              "type": "shappoli:send_action",
+              "receiver": "*:*_apply_penalty"
+            }
+          }
+        ]
+      },
+      "else_action": {
+        "type": "origins:modify_item_cooldown",
+        "modifier": {
+          "operation": "add_total_late",
+          "value": 80
+        }
+      }
+    },
+
+    "item_action_on_unequip": {
+      "type": "origins:if_else",
+      "condition": {
+        "type": "shappoli:send_condition",
+        "receiver": "*:*_does_penalty_apply"
+      },
+      "if_action": {
+        "type": "origins:and",
+        "actions": [
+          {
+            "type": "origins:damage"
+          },
+          {
+            "type": "origins:modify_item_cooldown",
+            "modifier": {
+              "operation": "add_total_late",
+              "value": 400
+            }
+          },
+          {
+            "type": "origins:holder",
+            "action": {
+              "type": "shappoli:send_action",
+              "receiver": "*:*_apply_penalty"
+            }
+          }
+        ]
+      }
+    }
+  },
+
+  "prevent_equip": {
+    "type": "shappoli:prevent_trinket_equip",
+    "item_condition": {
+      "type": "origins:or",
+      "conditions": [
+        {
+          "_": "Prevent multiple trinkets of the same type",
+          "type": "shappoli:equipped_trinket"
+        },
+        {
+          "type": "origins:item_cooldown",
+          "comparison": "!=",
+          "compare_to": 0
+        }
+      ]
+    }
+  },
+
+  "prevent_unequip": {
+    "type": "shappoli:prevent_trinket_unequip",
+    "item_condition": {
+      "type": "origins:item_cooldown",
+      "comparison": "!=",
+      "compare_to": 0
+    }
+  },
+
+  "does_penalty_apply": {
+    "type": "shappoli:receive_condition",
+    "item_condition": {
+      "type": "origins:or",
+      "conditions": [
+        {
+          "type": "origins:ingredient",
+          "ingredient": {
+            "item": "chimeraorigin:chimera_prime_core"
+          }
+        },
+        {
+          "type": "shappoli:holder",
+          "condition": {
+            "type": "origins:resource",
+            "resource": "*:modifications/core/core_equipped",
+            "comparison": "!=",
+            "compare_to": 2
+          }
+        }
+      ]
+    }
+  },
+
+  "apply_penalty": {
+    "type": "shappoli:receive_action",
+    "entity_action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:damage",
+          "amount": 2,
+          "damage_type": "chimeraorigin:body_modification"
+        },
+        {
+          "type": "origins:apply_effect",
+          "effects": [
+            {
+              "effect": "minecraft:slowness",
+              "duration": 300,
+              "amplifier": 0,
+              "is_ambient": true
+            },
+            {
+              "effect": "minecraft:weakness",
+              "duration": 300,
+              "amplifier": 0,
+              "is_ambient": true
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

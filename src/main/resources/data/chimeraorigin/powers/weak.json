@@ -1,0 +1,14 @@
+{
+  "type": "origins:multiple",
+
+  "less_health": {
+    "type": "origins:attribute",
+    "modifier": {
+      "name": "chimeraorigin:weak",
+      "attribute": "minecraft:generic.max_health",
+      "operation": "addition",
+      "value": -4
+    },
+    "update_health": true
+  }
+}

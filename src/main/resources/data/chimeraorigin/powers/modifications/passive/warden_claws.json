@@ -1,0 +1,113 @@
+{
+  "type": "origins:multiple",
+
+  "modify_harvest": {
+    "type": "origins:modify_harvest",
+    "allow": true,
+    "block_condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:in_tag",
+          "tag": "chimeraorigin:warden_claws/allowlist"
+        },
+        {
+          "type": "origins:in_tag",
+          "tag": "chimeraorigin:warden_claws/denylist",
+          "inverted": true
+        }
+      ]
+    },
+
+    "condition": {
+      "type": "shappoli:equipped_trinket",
+      "slot": {
+        "group": "chimeraorigin"
+      },
+      "item_condition": {
+        "type": "origins:and",
+        "conditions": [
+          {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "chimeraorigin:warden_claws"
+            }
+          },
+          {
+            "type": "origins:item_cooldown",
+            "comparison": "!=",
+            "compare_to": 0,
+            "inverted": true
+          }
+        ]
+      }
+    }
+  },
+
+  "modify_speed": {
+    "type": "origins:modify_break_speed",
+    "block_condition": {
+      "type": "origins:and",
+      "conditions": [
+        {
+          "type": "origins:in_tag",
+          "tag": "chimeraorigin:warden_claws/allowlist"
+        },
+        {
+          "type": "origins:in_tag",
+          "tag": "chimeraorigin:warden_claws/denylist",
+          "inverted": true
+        }
+      ]
+    },
+    "modifier": {
+      "operation": "multiply_base_additive",
+      "value": 0.07
+    },
+
+    "condition": {
+      "type": "shappoli:equipped_trinket",
+      "slot": {
+        "group": "chimeraorigin"
+      },
+      "item_condition": {
+        "type": "origins:and",
+        "conditions": [
+          {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "chimeraorigin:warden_claws"
+            }
+          },
+          {
+            "type": "origins:item_cooldown",
+            "comparison": "!=",
+            "compare_to": 0,
+            "inverted": true
+          }
+        ]
+      }
+    }
+  },
+
+  "obtain": {
+    "type": "origins:recipe",
+    "recipe": {
+      "id": "chimeraorigin:warden_claws",
+      "type": "minecraft:crafting_shaped",
+      "pattern": [
+        "  #",
+        " # ",
+        "#  "
+      ],
+      "key": {
+        "#": {
+          "item": "minecraft:echo_shard"
+        }
+      },
+      "result": {
+        "item": "chimeraorigin:warden_claws"
+      }
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "type": "origins:multiple",
+
+  "venom": {
+    "type": "origins:action_on_hit",
+
+    "bientity_action": {
+      "type": "origins:chance",
+      "chance": 0.2,
+      "action": {
+        "type": "origins:target_action",
+        "action": {
+          "type": "origins:apply_effect",
+          "effect": {
+            "effect": "minecraft:poison",
+            "duration": 80,
+            "amplifier": 0
+          }
+        }
+      }
+    },
+
+    "condition": {
+      "type": "shappoli:equipped_trinket",
+      "slot": {
+        "group": "chimeraorigin"
+      },
+      "item_condition": {
+        "type": "origins:and",
+        "conditions": [
+          {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "chimeraorigin:cave_spider_fangs"
+            }
+          },
+          {
+            "type": "origins:item_cooldown",
+            "comparison": "!=",
+            "compare_to": 0,
+            "inverted": true
+          }
+        ]
+      }
+    }
+  },
+
+  "obtain": {
+    "type": "origins:replace_loot_table",
+    "replace": {
+      "minecraft:entities/cave_spider": "chimeraorigin:cave_spider_fangs"
+    }
+  },
+  "badges": [
+    {
+      "type": "origins:tooltip",
+      "sprite": "origins:textures/gui/community/silent/badge/icons/sword.png",
+      "text": {
+        "translate": "badge.chimeraorigin.modifications.cave_spider_fangs"
+      }
+    }
+  ]
+}

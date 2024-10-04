@@ -1,0 +1,71 @@
+{
+  "type": "origins:multiple",
+
+  "receiver": {
+    "type": "shappoli:receive_action",
+    "item_condition": {
+      "type": "shappoli:holder",
+      "condition": {
+        "type": "origins:resource",
+        "resource": "*:*_cooldown",
+        "comparison": "==",
+        "compare_to": 0
+      }
+    },
+    "item_action": {
+      "type": "origins:modify_item_cooldown",
+      "modifier": {
+        "operation": "add_total_late",
+        "value": 80
+      }
+    },
+    "action": {
+      "type": "origins:and",
+      "actions": [
+        {
+          "type": "origins:trigger_cooldown",
+          "power": "*:*_cooldown"
+        },
+        {
+          "type": "origins:play_sound",
+          "category": "players",
+          "sound": "minecraft:entity.llama.spit",
+          "volume": 1,
+          "pitch": 1.25
+        },
+
+        {
+          "type": "origins:fire_projectile",
+          "entity_type": "minecraft:llama_spit",
+          "speed": 1
+        }
+      ]
+    }
+  },
+
+  "cooldown": {
+    "type": "origins:cooldown",
+    "cooldown": 80,
+    "hud_render": {
+      "should_render": true,
+      "sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
+      "bar_index": 12
+    }
+  },
+
+  "obtain": {
+    "type": "origins:replace_loot_table",
+    "replace": {
+      "minecraft:entities/llama": "chimeraorigin:llama_glands"
+    }
+  },
+  "badges": [
+    {
+      "type": "origins:tooltip",
+      "sprite": "origins:textures/gui/community/silent/badge/icons/sword.png",
+      "text": {
+        "translate": "badge.chimeraorigin.modifications.llama_glands"
+      }
+    }
+  ]
+}

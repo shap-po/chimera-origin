@@ -1,0 +1,119 @@
+{
+  "type": "origins:multiple",
+
+  "eat_blocks": {
+    "type": "origins:edible_item",
+
+    "item_condition": {
+      "type": "shappoli:is_block"
+    },
+    "food_component": {
+      "always_edible": true,
+      "hunger": 0,
+      "saturation": 0
+    },
+    "consume_sound": "minecraft:block.stone.break",
+
+    "entity_action": {
+      "type": "apoli:choice",
+      "actions": [
+        {
+          "element": {
+            "type": "origins:nothing"
+          },
+          "weight": 20
+        },
+
+        {
+          "element": {
+            "type": "origins:feed",
+            "food": 0,
+            "saturation": 1
+          },
+          "weight": 3
+        },
+        {
+          "element": {
+            "type": "origins:feed",
+            "food": 1,
+            "saturation": 0
+          },
+          "weight": 3
+        },
+        {
+          "element": {
+            "type": "origins:exhaust",
+            "amount": 1
+          },
+          "weight": 2
+        },
+
+        {
+          "element": {
+            "type": "origins:heal",
+            "amount": 0.5
+          },
+          "weight": 2
+        },
+
+        {
+          "element": {
+            "type": "origins:damage",
+            "amount": 0.5,
+            "damage_type": "minecraft:starve"
+          },
+          "weight": 1
+        },
+        {
+          "element": {
+            "type": "origins:apply_effect",
+            "effect": {
+              "effect": "minecraft:nausea",
+              "amplifier": 0,
+              "duration": 200,
+              "show_icon": false,
+              "show_particles": false
+            }
+          },
+          "weight": 1
+        },
+        {
+          "element": {
+            "type": "origins:apply_effect",
+            "effect": {
+              "effect": "minecraft:poison",
+              "amplifier": 0,
+              "duration": 200,
+              "show_icon": false,
+              "show_particles": false
+            }
+          },
+          "weight": 1
+        }
+      ]
+    },
+
+    "condition": {
+      "type": "origins:resource",
+      "resource": "*:modifications/core/core_equipped",
+      "comparison": "==",
+      "compare_to": 6
+    }
+  },
+
+  "obtain": {
+    "type": "origins:replace_loot_table",
+    "replace": {
+      "minecraft:entities/silverfish": "chimeraorigin:silverfish_stomach"
+    }
+  },
+  "badges": [
+    {
+      "type": "origins:tooltip",
+      "sprite": "origins:textures/gui/community/silent/badge/icons/sword.png",
+      "text": {
+        "translate": "badge.chimeraorigin.modifications.silverfish_stomach"
+      }
+    }
+  ]
+}

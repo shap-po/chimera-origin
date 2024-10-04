@@ -1,0 +1,144 @@
+{
+  "type": "origins:multiple",
+
+  "primary_sender": {
+    "_": "Get the trinket, and redirect logic to router",
+    "type": "origins:active_self",
+    "key": {
+      "key": "key.origins.primary_active"
+    },
+
+    "entity_action": {
+      "type": "shappoli:modify_trinket",
+      "slot": {
+        "group": "chimeraorigin",
+        "name": "active_primary"
+      },
+      "item_condition": {
+        "type": "origins:empty",
+        "inverted": true
+      },
+      "item_action": {
+        "type": "shappoli:send_action",
+        "receiver": "*:*_router"
+      }
+    }
+  },
+
+  "secondary_sender": {
+    "_": "Get the trinket, and redirect logic to router",
+    "type": "origins:active_self",
+    "key": {
+      "key": "key.origins.secondary_active"
+    },
+
+    "entity_action": {
+      "type": "shappoli:modify_trinket",
+      "slot": {
+        "group": "chimeraorigin",
+        "name": "active_secondary"
+      },
+      "item_condition": {
+        "type": "origins:empty",
+        "inverted": true
+      },
+      "item_action": {
+        "type": "shappoli:send_action",
+        "receiver": "*:*_router"
+      }
+    }
+  },
+
+  "router": {
+    "_": "Find the corresponding receiver for the trinket and send the item to it",
+    "type": "shappoli:receive_action",
+    "item_action": {
+      "type": "origins:if_else_list",
+      "actions": [
+        {
+          "_": "Ignore if the trinket is on cooldown",
+          "condition": {
+            "type": "origins:item_cooldown",
+            "comparison": "!=",
+            "compare_to": 0
+          },
+          "action": {
+            "type": "origins:nothing"
+          }
+        },
+        {
+          "condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "chimeraorigin:llama_glands"
+            }
+          },
+          "action": {
+            "type": "shappoli:send_action",
+            "receiver": "*:modifications/active/llama_glands_receiver"
+          }
+        },
+        {
+          "condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "chimeraorigin:mage_killer"
+            }
+          },
+          "action": {
+            "type": "shappoli:send_action",
+            "receiver": "*:modifications/active/mage_killer_receiver"
+          }
+        },
+        {
+          "condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "chimeraorigin:ravager_horns"
+            }
+          },
+          "action": {
+            "type": "shappoli:send_action",
+            "receiver": "*:modifications/active/ravager_horns_receiver"
+          }
+        },
+        {
+          "condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "chimeraorigin:slime_tentacles"
+            }
+          },
+          "action": {
+            "type": "shappoli:send_action",
+            "receiver": "*:modifications/active/slime_tentacles_receiver"
+          }
+        },
+        {
+          "condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "chimeraorigin:squid_tentacles"
+            }
+          },
+          "action": {
+            "type": "shappoli:send_action",
+            "receiver": "*:modifications/active/squid_tentacles_receiver"
+          }
+        },
+        {
+          "condition": {
+            "type": "origins:ingredient",
+            "ingredient": {
+              "item": "chimeraorigin:warden_vocal_cords"
+            }
+          },
+          "action": {
+            "type": "shappoli:send_action",
+            "receiver": "*:modifications/active/warden_vocal_cords_receiver"
+          }
+        }
+      ]
+    }
+  }
+}

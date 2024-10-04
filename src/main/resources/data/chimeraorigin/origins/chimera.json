@@ -1,0 +1,37 @@
+{
+  "icon": "minecraft:tadpole_bucket",
+  "impact": 2,
+
+  "powers": [
+    "chimeraorigin:weak",
+    "chimeraorigin:carnivore",
+
+    "chimeraorigin:modifications/modifications",
+
+    "chimeraorigin:modifications/active/active",
+    "chimeraorigin:modifications/active/ravager_horns",
+    "chimeraorigin:modifications/active/warden_vocal_cords",
+    "chimeraorigin:modifications/active/slime_tentacles",
+    "chimeraorigin:modifications/active/squid_tentacles",
+    "chimeraorigin:modifications/active/mage_killer",
+    "chimeraorigin:modifications/active/llama_glands",
+
+    "chimeraorigin:modifications/core/core",
+    "chimeraorigin:modifications/core/chimera_prime_core",
+    "chimeraorigin:modifications/core/blaze_core",
+    "chimeraorigin:modifications/core/dragon_heart",
+    "chimeraorigin:modifications/core/prismarine_core",
+    "chimeraorigin:modifications/core/omnivore_stomach",
+    "chimeraorigin:modifications/core/silverfish_stomach",
+
+    "chimeraorigin:modifications/passive/passive",
+    "chimeraorigin:modifications/passive/allay_larynx",
+    "chimeraorigin:modifications/passive/cave_spider_fangs",
+    "chimeraorigin:modifications/passive/creeper_skin",
+    "chimeraorigin:modifications/passive/dragon_scales",
+    "chimeraorigin:modifications/passive/horse_muscles",
+    "chimeraorigin:modifications/passive/ocelot_paws",
+    "chimeraorigin:modifications/passive/phantom_eyes",
+    "chimeraorigin:modifications/passive/warden_claws"
+  ]
+}
